@@ -1,0 +1,18 @@
+{
+    "authors": [
+        {
+            "name": "Vitaly Buzin",
+            "email": "vitaly.buzin@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "twig/twig": "^2.0"
+    },
+    "autoload": {
+        "classmap": ["classes"],
+        "files": [
+            "helpers/FileHelper.php"
+        ]
+    }
+}

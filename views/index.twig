@@ -1,0 +1,38 @@
+{% extends "layout.twig" %}
+{% block content %}
+    <h1>{{ title }}</h1>
+    <h3>{{ breadcrumbs }}</h3>
+    {%  if error %}
+    <div class="alert alert-danger alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4>Exception thrown</h4>
+        <p>{{ error }}</p>
+        <p>
+            <button type="button" class="btn btn-danger" onclick="window.history.back()">Go Back</button>
+            <button type="button" class="btn btn-default" data-dismiss="alert">Close</button>
+        </p>
+    </div>
+    {% endif %}
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Size</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in items %}
+        <tr>
+            <td>
+                {% if item.href %}
+                    <a href="{{ item.href }}">{{ item.name }}</a>
+                {% else %}
+                    {{ item.name }}
+                {% endif %}
+            </td>
+            <td>{{ item.size }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
