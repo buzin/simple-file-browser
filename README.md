@@ -1,3 +1,3 @@
 # Simple File Browser
 
-Вывести список файлов текущей папки с возможностью перехода по папкам и без возможности выхода за пределы рабочей папки сайта. Скрипт должен отображать только папки и картинки.
+Show a list of current folder images, having an ability to navigate between folders. The script shows folders and pictures only.
